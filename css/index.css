@@ -1,0 +1,77 @@
+.wraper-page {
+    position: relative;
+    height:100%;
+}
+
+.header{
+    width: 100%;
+    height: 46px;
+    border-bottom: 1px solid red;
+    text-align: center;
+    font-weight: bold;
+    padding: 0 5px;
+    z-index: 1;
+}
+
+.header h1 {
+    height:100%;
+    line-height: 46px;
+}
+
+.header .btn-slide-bar {
+    float: left;
+    width: 46px;
+    height: 46px;
+    cursor: pointer;
+    line-height: 46px;
+}
+
+.header .btn-slide-bar:before {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background-color: #999;
+    display: inline-block;
+    box-shadow: 0 7px 0 #999, 0 -7px 0 #999; /* 参数的含义  向右向下为正 前俩个是水平和垂直偏移  第三个是模糊   */
+}
+
+
+
+footer {
+    position: absolute;
+    left:0;
+    bottom:0;
+    width: 100%;
+    border-top: 1px solid #333333;
+    text-align: center;
+    height:30px;
+
+}
+
+footer h1 {
+    height:100%;
+    line-height: 30px;
+}
+
+
+/*导航部分*/
+
+.slide-bar {
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    background-color: #333;
+    width: 0;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.slide-bar li {
+    padding-left: 10px;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    color: #fff;
+    border-bottom: 1px solid #222;
+}

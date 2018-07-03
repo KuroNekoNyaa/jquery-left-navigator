@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<section class="wraper-page">
+    <header class="header">
+        <span class="btn-slide-bar"></span>
+        <h1 class="page-title">左侧导航</h1>
+    </header>
+
+    <p>请使用你的移动网页浏览本页面</p>
+    <p>点击左上角按钮试试效果</p>
+
+<footer class="footer">
+    <h1>到底了</h1>
+</footer>
+</section>
+<!--导航部分-->
+<section class="slide-bar">
+    <ul>
+        <li>首页</li>
+        <li>菜单导航</li>
+        <li>jQuery特效</li>
+        <li>CSS3特效</li>
+        <li>tab标签</li>
+    </ul>
+</section>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+   var swiper = {
+       init: function () {
+           var self = this;
+
+           $('.btn-slide-bar').on('click', function () {
+               if (!$(this).hasClass('active')) {
+                   self.swipeRight()
+               } else {
+                   self.swipeLeft();
+               }
+           });
+       },
+
+       swipeRight: function () {
+           $('.slide-bar').animate({
+               width: '50%'
+           }, 50);
+
+           $('.wraper-page').animate({
+               marginLeft: '50%'
+           }, 50);
+
+           $('footer').animate({
+               marginLeft: '50%'
+           }, 50);
+
+           $('.btn-slide-bar').addClass('active');
+       },
+
+       swipeLeft: function () {
+            $('.slide-bar').animate({
+                width: 0
+            }, 50);
+
+            $('.wraper-page').animate({
+                marginLeft: 0
+            }, 50);
+
+
+           $('footer').animate({
+               marginLeft: 0
+           }, 50);
+
+            $('.btn-slide-bar').removeClass('active');
+       }
+   };
+
+   swiper.init();
+</script>
+</body>
+</html>
